@@ -13,7 +13,7 @@ def plot_combined_curves(
     path_mlp: str,
     path_kan: str,
     label_mlp: str = "MLP",
-    label_kan: str = "KAN",
+    label_kan: str = "CPKAN",
     title: str = "Train Loss Comparison",
     y_label: str = "Loss",
     save_path: str = "combined_loss_plot.png"
@@ -41,7 +41,7 @@ def plot_combined_curves(
 
 def main():
     # Example usage:
-    # A) For Jane Street Weighted MSE (QKAN vs MLP):
+    # A) For Jane Street Weighted MSE (CPKAN vs MLP):
     # We'll assume the npy files from test_jane_street.py
     path_qkan = "./models_janestreet/qkan_train_losses.npy"
     path_mlp  = "./models_janestreet/mlp_train_losses.npy"
@@ -50,8 +50,8 @@ def main():
             path_mlp=path_mlp,
             path_kan=path_qkan,
             label_mlp="MLP Weighted MSE",
-            label_kan="QKAN Weighted MSE",
-            title="Jane Street Weighted MSE: MLP vs QKAN",
+            label_kan="CPKAN Weighted MSE",
+            title="Jane Street Weighted MSE: MLP vs CPKAN",
             save_path="./models_janestreet/combined_loss_janestreet.png"
         )
 
@@ -63,8 +63,8 @@ def main():
             path_mlp=path_mlp_cov,
             path_kan=path_qkan_cov,
             label_mlp="MLP CE Loss",
-            label_kan="QKAN CE Loss",
-            title="Covertype Classification: MLP vs QKAN",
+            label_kan="CPKAN CE Loss",
+            title="Covertype Classification: MLP vs CPKAN",
             save_path="models_tabular_data/combined_loss_covertype.png"
         )
 
@@ -76,8 +76,8 @@ def main():
             path_mlp=path_mlp_house,
             path_kan=path_qkan_house,
             label_mlp="MLP MSE",
-            label_kan="QKAN MSE",
-            title="House Sales Regression: MLP vs QKAN",
+            label_kan="CPKAN MSE",
+            title="House Sales Regression: MLP vs CPKAN",
             save_path="models_tabular_data/combined_loss_house_sales.png"
         )
 
