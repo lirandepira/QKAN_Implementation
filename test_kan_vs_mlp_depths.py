@@ -305,7 +305,7 @@ class TestKANvsMLPDepths(unittest.TestCase):
                     label=f'MLP-{depth} [{param_count} params]', 
                     color=color, linewidth=2)
         
-        plt.title("KAN vs MLP Depths: Validation R² vs Epoch\nJane Street Market Prediction")
+        plt.title("CP-KAN vs MLP Depths: Validation R² vs Epoch\nJane Street Market Prediction")
         plt.xlabel("Epoch")
         plt.ylabel("Weighted R²")
         plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
